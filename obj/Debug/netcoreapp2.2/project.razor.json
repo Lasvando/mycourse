@@ -1872,6 +1872,11 @@
   "RootNamespace": "MyCourse",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Federico\\Desktop\\MyCourse\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Federico\\Desktop\\MyCourse\\Views\\Courses\\Detail.cshtml",
       "TargetPath": "Views\\Courses\\Detail.cshtml",
       "FileKind": "mvc"
