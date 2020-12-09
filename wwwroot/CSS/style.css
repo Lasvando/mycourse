@@ -1,0 +1,68 @@
+h1{
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    font-weight: 400;
+}
+
+.course h2{
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+hr{
+    margin: 0.5em 0;
+}
+
+author{
+    font-style: italic;
+    color: #888;
+}
+
+.rating{
+    color: orange;
+    white-space: nowrap;
+}
+
+.price s{
+    display: ;
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+footer{
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    padding-bottom: 2em;
+    text-align: center;
+    color: gray;
+}
+
+.course-info aside{
+    background-color: #f5f5f5;
+    padding: 1em;
+    height: 100%;
+}
+
+.course-info .register-button, .course-info .course-picture{
+    margin-top: 1em;
+}
+
+.course-info .price{
+    font-size: 1.3em;
+}
+
+.course-info .subscribe-course{
+    margin-bottom:1em;
+}
+
+.course-lessons .lesson-duration i, .course-lessons time{
+    margin-right: 0.3em;
+}
+
+.course-lessons .course-duration{
+    font-weight: bold;
+}
+

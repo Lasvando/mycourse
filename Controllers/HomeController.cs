@@ -5,7 +5,8 @@ namespace MyCourse.Controllers
     public class HomeController : Controller
     {
         public IActionResult Index(){
-            return Content("Index della Home");
+            ViewData["Title"] = "Home";
+            return View();
         }
     }
 }
