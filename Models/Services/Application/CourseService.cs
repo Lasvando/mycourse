@@ -5,7 +5,7 @@ using MyCourse.Models.ViewModels;
 
 namespace MyCourse.Models.Services.Application
 {
-    public class CourseService
+    public class CourseService : ICourseService
     {
         public List<CourseViewModel> GetCourses()
         {
@@ -29,12 +29,12 @@ namespace MyCourse.Models.Services.Application
             return courseList;
         }
 
-        public CourseDetailViewModel GetCourse(string id)
+        public CourseDetailViewModel GetCourse(int id)
         {
             var rand = new Random();
             var price = Convert.ToDecimal(rand.NextDouble() * 10 + 10);
             var course = new CourseDetailViewModel{
-                Id = int.Parse(id),
+                Id = id,
                 Title = $"Corso {id}",
                 CurrentPrice = new Money(Currency.EUR, price),
                 FullPrice = new Money(Currency.EUR, rand.NextDouble() > 0.5 ? price : price + 1),
