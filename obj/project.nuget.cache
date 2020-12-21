@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3I+JlP8QWWsTZJ8aDb3S0f2fXA8oP9glehOY1fdl+KRy9uOA/F2QKyZUS1PNe+bSfX+cLRUxjdXtOu4Vso5xQw==",
+  "dgSpecHash": "YoQRwNc+xkjgH90+yKAD/F5hFkdSdSPxOBUUCRMTjs1D+Q2IowfIDBwj0oTU/hRdYsZMNq0nePtitBPE0Qk31A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Federico\\Desktop\\MyCourse\\MyCourse.csproj",
   "expectedPackageFiles": [
@@ -114,6 +114,8 @@
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.design\\2.2.0\\microsoft.entityframeworkcore.design.2.2.0.nupkg.sha512",
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.inmemory\\2.2.0\\microsoft.entityframeworkcore.inmemory.2.2.0.nupkg.sha512",
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.relational\\2.2.0\\microsoft.entityframeworkcore.relational.2.2.0.nupkg.sha512",
+    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.sqlite\\2.2.0\\microsoft.entityframeworkcore.sqlite.2.2.0.nupkg.sha512",
+    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.sqlite.core\\2.2.0\\microsoft.entityframeworkcore.sqlite.core.2.2.0.nupkg.sha512",
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.sqlserver\\2.2.0\\microsoft.entityframeworkcore.sqlserver.2.2.0.nupkg.sha512",
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.entityframeworkcore.tools\\2.2.0\\microsoft.entityframeworkcore.tools.2.2.0.nupkg.sha512",
     "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.extensions.caching.abstractions\\2.2.0\\microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512",
