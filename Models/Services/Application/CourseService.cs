@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MyCourse.Models.Services.Infrastructure;
 using MyCourse.Models.ViewModels;
 
@@ -7,7 +8,7 @@ namespace MyCourse.Models.Services.Application
 {
     public class CourseService : ICourseService
     {
-        public List<CourseViewModel> GetCourses()
+        public async Task<List<CourseViewModel>> GetCoursesAsync()
         {
             var courseList = new List<CourseViewModel>();
             var rand = new Random();
@@ -29,7 +30,7 @@ namespace MyCourse.Models.Services.Application
             return courseList;
         }
 
-        public CourseDetailViewModel GetCourse(int id)
+        public async Task<CourseDetailViewModel> GetCourseAsync(int id)
         {
             var rand = new Random();
             var price = Convert.ToDecimal(rand.NextDouble() * 10 + 10);

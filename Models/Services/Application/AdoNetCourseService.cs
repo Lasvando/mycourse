@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using MyCourse.Models.Services.Infrastructure;
@@ -14,15 +15,36 @@ namespace MyCourse.Models.Services.Application
 
         }
 
-        public CourseDetailViewModel GetCourse(int id)
+        public async System.Threading.Tasks.Task<CourseDetailViewModel> GetCourseAsync(int id)
         {
-            throw new System.NotImplementedException();
+            FormattableString query = $@"SELECT Id,Title, Description, ImagePath, Author, Rating, FullPrice_Amount, FullPrice_Currency, CurrentPrice_Amount, CurrentPrice_Currency FROM Courses WHERE Id={id}
+            ; SELECT Id, Title, Description, Duration FROM Lessons WHERE CourseId={id}";
+
+            DataSet dataSet = await db.QueryAsync(query);
+
+            //Course
+            var courseTable = dataSet.Tables[0];
+            if(courseTable.Rows.Count != 1){
+                throw new InvalidOperationException($"Did not return exactly 1 row for Course {id}");
+            }
+            var courseRow = courseTable.Rows[0];
+            CourseDetailViewModel courseDetailViewModel = CourseDetailViewModel.FromDataRow(courseRow) as CourseDetailViewModel;
+
+            //Course Lessons
+            var lessonDataTable = dataSet.Tables[1];
+
+            foreach(DataRow lessonRow in lessonDataTable.Rows){
+                LessonViewModel lessonViewModel = LessonViewModel.FromDataRow(lessonRow);
+                courseDetailViewModel.Lessons.Add(lessonViewModel);
+            }
+
+            return courseDetailViewModel;
         }
 
-        public List<CourseViewModel> GetCourses()
+        public async System.Threading.Tasks.Task<List<CourseViewModel>> GetCoursesAsync()
         {
-            string query = "SELECT Id, Title, ImagePath, Author, Rating, FullPrice_Amount, FullPrice_Currency, CurrentPrice_Amount, CurrentPrice_Currency FROM Courses";
-            DataSet dataSet = db.Query(query);
+            FormattableString query = $"SELECT Id, Title, ImagePath, Author, Rating, FullPrice_Amount, FullPrice_Currency, CurrentPrice_Amount, CurrentPrice_Currency FROM Courses";
+            DataSet dataSet = await db.QueryAsync(query);
             var dataTable = dataSet.Tables[0];
             var courseList = new List<CourseViewModel>();
             foreach (DataRow courseRow in dataTable.Rows)
